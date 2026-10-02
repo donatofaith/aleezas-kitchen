@@ -1,78 +1,190 @@
-/* Readability pass: increase supporting copy without making headings oversized. */
+/* Stronger readability pass: keep the visual hierarchy, but make all supporting text easier to read. */
 
-#menu p:not([class*="uppercase"]) {
+body {
+  font-weight: 450;
+}
+
+/* NAV + HERO SMALL COPY */
+.navLinks a {
   font-size: 16px !important;
+  font-weight: 650 !important;
+}
+
+.navOrder {
+  font-size: 15px !important;
+  font-weight: 800 !important;
+}
+
+.heroEyebrow {
+  font-size: 12px !important;
+  font-weight: 850 !important;
+}
+
+.heroDescription {
+  font-size: 17px !important;
   line-height: 1.75 !important;
+  font-weight: 500 !important;
+}
+
+.foodLabel {
+  font-size: 11px !important;
+  font-weight: 850 !important;
+}
+
+.tickerTrack {
+  font-size: 12px !important;
+  font-weight: 850 !important;
+}
+
+/* SECTION EYEBROWS / SMALL CAPS */
+#menu p[class*="uppercase"],
+#about p[class*="uppercase"],
+#reviews p[class*="uppercase"],
+#contact p[class*="uppercase"],
+footer p[class*="uppercase"] {
+  font-size: 12px !important;
+  font-weight: 850 !important;
+  letter-spacing: 0.18em !important;
+}
+
+/* MENU */
+#menu p:not([class*="uppercase"]) {
+  font-size: 17px !important;
+  line-height: 1.75 !important;
+  font-weight: 500 !important;
 }
 
 #menu article p {
-  font-size: 15px !important;
-  line-height: 1.7 !important;
+  font-size: 16px !important;
+  line-height: 1.72 !important;
+  font-weight: 500 !important;
 }
 
 #menu article span[class*="text-[9px]"] {
   font-size: 11px !important;
+  font-weight: 850 !important;
 }
 
+#menu article span[class*="text-[11px]"] {
+  font-size: 12px !important;
+  font-weight: 850 !important;
+}
+
+/* ABOUT */
 #about p[class*="text-[18px]"] {
-  font-size: 20px !important;
-  line-height: 1.65 !important;
+  font-size: 21px !important;
+  line-height: 1.62 !important;
+  font-weight: 500 !important;
 }
 
 #about p[class*="text-[15px]"] {
-  font-size: 17px !important;
-  line-height: 1.8 !important;
+  font-size: 18px !important;
+  line-height: 1.82 !important;
+  font-weight: 500 !important;
 }
 
 #about .mt-9 span {
-  font-size: 14px !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
   line-height: 1.2 !important;
-  padding: 10px 16px !important;
+  padding: 11px 17px !important;
 }
 
+/* REVIEWS */
 #reviews p:not([class*="uppercase"]) {
-  font-size: 15px !important;
-  line-height: 1.7 !important;
+  font-size: 16px !important;
+  line-height: 1.72 !important;
+  font-weight: 500 !important;
 }
 
 #reviews blockquote {
-  line-height: 1.18 !important;
+  line-height: 1.2 !important;
 }
 
+#reviews button,
+#reviews span {
+  font-weight: 700;
+}
+
+/* CONTACT */
 #contact p:not([class*="uppercase"]) {
-  font-size: 16px !important;
+  font-size: 17px !important;
   line-height: 1.75 !important;
+  font-weight: 500 !important;
 }
 
 #contact a {
-  font-size: 15px !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
 }
 
+/* FOOTER */
 footer p,
 footer a {
-  font-size: 14px !important;
-  line-height: 1.7 !important;
+  font-size: 15px !important;
+  line-height: 1.72 !important;
+  font-weight: 500 !important;
 }
 
+footer a {
+  font-weight: 650 !important;
+}
+
+/* MOBILE */
 @media (max-width: 640px) {
+  .navLinks a {
+    font-size: 13px !important;
+    font-weight: 750 !important;
+  }
+
+  .navOrder {
+    font-size: 12px !important;
+  }
+
+  .heroEyebrow {
+    font-size: 10px !important;
+  }
+
+  .heroDescription {
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+  }
+
+  #menu p[class*="uppercase"],
+  #about p[class*="uppercase"],
+  #reviews p[class*="uppercase"],
+  #contact p[class*="uppercase"],
+  footer p[class*="uppercase"] {
+    font-size: 10.5px !important;
+    letter-spacing: 0.16em !important;
+  }
+
   #menu p:not([class*="uppercase"]),
-  #about p[class*="text-[15px]"],
   #reviews p:not([class*="uppercase"]),
   #contact p:not([class*="uppercase"]) {
-    font-size: 15px !important;
+    font-size: 16px !important;
+  }
+
+  #menu article p {
+    font-size: 15.5px !important;
   }
 
   #about p[class*="text-[18px]"] {
-    font-size: 18px !important;
+    font-size: 19px !important;
     line-height: 1.65 !important;
   }
 
+  #about p[class*="text-[15px]"] {
+    font-size: 16px !important;
+    line-height: 1.76 !important;
+  }
+
   #about .mt-9 span {
-    font-size: 13px !important;
+    font-size: 14px !important;
   }
 
   footer p,
   footer a {
-    font-size: 13px !important;
+    font-size: 14px !important;
   }
 }
