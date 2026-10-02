@@ -1,0 +1,21 @@
+/* Prevent mobile browsers in "Desktop site" mode from stretching the hero wrapper
+   to an unusually tall CSS viewport and leaving a large cream gap below the hero. */
+
+.hero {
+  min-height: 0 !important;
+  height: auto !important;
+}
+
+/* Let the hero size itself from the navbar + actual red hero panel. */
+.heroStage {
+  display: block;
+}
+
+/* Desktop-mode phones often report a wide CSS viewport but remain touch devices.
+   Keep the hero compact in that case instead of using viewport-height sizing. */
+@media (hover: none) and (pointer: coarse) {
+  .hero {
+    min-height: 0 !important;
+    height: auto !important;
+  }
+}
