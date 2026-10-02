@@ -1,0 +1,78 @@
+/* Readability pass: increase supporting copy without making headings oversized. */
+
+#menu p:not([class*="uppercase"]) {
+  font-size: 16px !important;
+  line-height: 1.75 !important;
+}
+
+#menu article p {
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+}
+
+#menu article span[class*="text-[9px]"] {
+  font-size: 11px !important;
+}
+
+#about p[class*="text-[18px]"] {
+  font-size: 20px !important;
+  line-height: 1.65 !important;
+}
+
+#about p[class*="text-[15px]"] {
+  font-size: 17px !important;
+  line-height: 1.8 !important;
+}
+
+#about .mt-9 span {
+  font-size: 14px !important;
+  line-height: 1.2 !important;
+  padding: 10px 16px !important;
+}
+
+#reviews p:not([class*="uppercase"]) {
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+}
+
+#reviews blockquote {
+  line-height: 1.18 !important;
+}
+
+#contact p:not([class*="uppercase"]) {
+  font-size: 16px !important;
+  line-height: 1.75 !important;
+}
+
+#contact a {
+  font-size: 15px !important;
+}
+
+footer p,
+footer a {
+  font-size: 14px !important;
+  line-height: 1.7 !important;
+}
+
+@media (max-width: 640px) {
+  #menu p:not([class*="uppercase"]),
+  #about p[class*="text-[15px]"],
+  #reviews p:not([class*="uppercase"]),
+  #contact p:not([class*="uppercase"]) {
+    font-size: 15px !important;
+  }
+
+  #about p[class*="text-[18px]"] {
+    font-size: 18px !important;
+    line-height: 1.65 !important;
+  }
+
+  #about .mt-9 span {
+    font-size: 13px !important;
+  }
+
+  footer p,
+  footer a {
+    font-size: 13px !important;
+  }
+}
